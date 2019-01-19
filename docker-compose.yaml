@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  smartrent-bridge:
+    container_name: smartrent-bridge
+    restart: unless-stopped
+    build: .
+    env_file:
+      - smartrent.env
