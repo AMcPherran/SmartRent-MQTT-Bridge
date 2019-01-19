@@ -59,7 +59,7 @@ This hub connects to all of the devices over [Z-Wave](https://www.z-wave.com/) l
 
 On the LAN interface, the hub has a Dropbear SSH server listening on port 22, and a REST API on port 8080. I'm not sure what ports are open over the LTE connection.
 
-[hub-exterior]: https://github.com/AMcPherran/SmartRent-MQTT-Bridge/blob/master/images/devices/smartrent-hub-exterior.jpg "Hub Exterior"
-[hub-interior]: https://github.com/AMcPherran/SmartRent-MQTT-Bridge/blob/master/images/devices/smartrent-hub-internal.jpg "Hub Interior"
-[hub-ports]:  https://github.com/AMcPherran/SmartRent-MQTT-Bridge/blob/master/images/devices/smartrent-hub-ports.jpg "Hub Rear Ports"
-[hub-bottom]: https://github.com/AMcPherran/SmartRent-MQTT-Bridge/blob/master/images/devices/smartrent-hub-sticker.jpg "Hub Bottom Sticker"
+![Hub Exterior](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-exterior.jpg)
+![Hub Interior](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-internal.jpg)
+![Hub Ports](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-ports.jpg)
+![Hub Bottom](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-sticker.jpg)
