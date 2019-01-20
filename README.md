@@ -63,3 +63,10 @@ On the LAN interface, the hub has a Dropbear SSH server listening on port 22, an
 ![Hub Interior](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-internal.jpg)
 ![Hub Ports](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-ports.jpg)
 ![Hub Bottom](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/smartrent-hub-sticker.jpg)
+
+## The Lock
+The lock that was installed on my door is made by Yale. It has a touch-panel keypad and no physical key. 
+The lock reports the USER_ID associated with the PIN used to unlock the door, the current state of the lock, and the method used to lock/unlock the door (keypad, network, thumbturn, inside/outside). From this it is easy to infer the arrival/departure times of residents. 
+
+![Lock Outside](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/yale-lock-outside.jpg)
+![Lock Inside](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/raw/master/images/devices/yale-lock-inside.jpg)
