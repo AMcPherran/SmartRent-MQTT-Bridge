@@ -53,6 +53,8 @@ You will likely need to edit the `devices` variable in `smartrent-bridge.py` to 
 |<MQTT_TOPIC_PREFIX>/<device_mqtt_topic>/detail  | Details about the last lock interaction| String                |
 
 # More on SmartRent's System
+## Websocket Message Formats
+A list of the important WebSocket messages exchanged between the web client and SmartRent's service can be found [here (WIP)](https://github.com/AMcPherran/SmartRent-MQTT-Bridge/blob/master/Message-Formats.md)
 ## The Hub
 The hub provided by SmartRent is a device made by Zipato called the [ZipaMicro](https://www.zipato.com/product/zipamicro).
 This hub connects to all of the devices over [Z-Wave](https://www.z-wave.com/) local RF, and connects them to ZipaMicro's cloud-services, which then are called by SmartRent's service. The hub comes with a USB LTE dongle to keep it connected if you decide not to connect it to your LAN. 
