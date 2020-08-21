@@ -16,10 +16,11 @@ RUN cd /opt/Python-3.7.1 && make
 RUN cd /opt/Python-3.7.1 && make install
 
 RUN pip3 install -U selenium setuptools mitmproxy paho-mqtt asyncio
-
 ADD ./docker/entry_point.sh /opt/bin/entry_point.sh
+RUN sed -i -e 's/\r$//' /opt/bin/entry_point.sh
 RUN chmod +x /opt/bin/entry_point.sh
 ADD ./docker/run.sh /opt/run.sh
+RUN sed -i -e 's/\r$//' /opt/run.sh
 RUN chmod +x /opt/run.sh
 ADD ./python/smartrent-bridge.py /opt/smartrent-bridge.py
 ADD ./python/smartrent-login.py /opt/smartrent-login.py

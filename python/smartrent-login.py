@@ -33,14 +33,16 @@ def login():
     driver = webdriver.Chrome(options=chrome_options)
     print("Got a webdriver")
     driver.get('https://control.smartrent.com/login/?')
-    print("Navigated to SmartRent login page")
+    print("Navigated to SmartRent login page(username)")
     time.sleep(3)
-    email_box = driver.find_element_by_name('session[email]')
-    password_box = driver.find_element_by_name('session[password]')
-    # Enter login credentials
+    email_box = driver.find_element_by_xpath('/html/body/main/div/div/div/section/form/div[1]/input')
     email_box.send_keys(smartrent_email)
+    email_box.submit()
+    time.sleep(3)
+    print("Navigated to SmartRent login page(password)")
+    password_box = driver.find_element_by_xpath('/html/body/main/div/div/div/section/form/div/input')
+    # Enter login credentials
     password_box.send_keys(smartrent_password)
-    # Login
     password_box.submit()
     print("Logged In")
     time.sleep(3)
