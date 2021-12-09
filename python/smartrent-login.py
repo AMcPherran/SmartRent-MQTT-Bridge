@@ -2,6 +2,9 @@ import time
 from selenium import webdriver
 import asyncio
 import os, re
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 smartrent_email = os.environ.get('SMARTRENT_EMAIL')      
 smartrent_password = os.environ.get('SMARTRENT_PASSWORD')
@@ -34,16 +37,13 @@ def login():
     print("Got a webdriver")
     driver.get('https://control.smartrent.com/login/?')
     print("Navigated to SmartRent login page(username)")
-    time.sleep(3)
-    email_box = driver.find_element_by_xpath('/html/body/main/div/div/div/section/form/div[1]/input')
-    email_box.send_keys(smartrent_email)
-    email_box.submit()
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//input[@type='text']"))).send_keys(smartrent_email)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//div[contains(.,"Continue") and @role="button"]'))).click()
     time.sleep(3)
     print("Navigated to SmartRent login page(password)")
-    password_box = driver.find_element_by_xpath('/html/body/main/div/div/div/section/form/div/input')
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//input[@type='password']"))).send_keys(smartrent_password)
     # Enter login credentials
-    password_box.send_keys(smartrent_password)
-    password_box.submit()
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//div[contains(.,"Sign In") and @role="button"]'))).click()
     print("Logged In")
     time.sleep(3)
     driver.get('https://control.smartrent.com/resident')
